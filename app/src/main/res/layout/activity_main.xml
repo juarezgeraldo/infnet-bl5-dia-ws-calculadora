@@ -7,12 +7,145 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/lblTotalConta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Total da conta"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/txtTotalConta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTotalConta" />
+
+    <TextView
+        android:id="@+id/lblPessoas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Quantidade de pessoas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTotalConta" />
+
+    <EditText
+        android:id="@+id/txtPessoas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblPessoas" />
+
+    <SeekBar
+        android:id="@+id/skGorjeta"
+        android:layout_width="245dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:max="100"
+        android:progress="5"
+        android:progressTint="#030865"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblGorgeta" />
+
+    <TextView
+        android:id="@+id/lblGorgeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Gorgeta: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPessoas" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblPessoa"
+        app:srcCompat="@drawable/gorjeta" />
+
+    <TextView
+        android:id="@+id/lblGorjeta"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Valor da gorjeta:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/skGorjeta" />
+
+    <TextView
+        android:id="@+id/lblTotal"
+        android:layout_width="120dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Total:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblGorjeta" />
+
+    <TextView
+        android:id="@+id/lblPessoa"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Total por pessoa:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTotal" />
+
+    <TextView
+        android:id="@+id/lblPercentualGorjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="5%"
+        app:layout_constraintStart_toEndOf="@+id/skGorjeta"
+        app:layout_constraintTop_toBottomOf="@+id/lblGorgeta" />
+
+    <TextView
+        android:id="@+id/lblValorGorjeta"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="R$ 0,00"
+        android:textAlignment="textEnd"
+        app:layout_constraintStart_toEndOf="@+id/lblGorjeta"
+        app:layout_constraintTop_toBottomOf="@+id/skGorjeta" />
+
+    <TextView
+        android:id="@+id/lblValorTotal"
+        android:layout_width="80dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="8dp"
+        android:text="R$ 0,00"
+        android:textAlignment="textEnd"
+        app:layout_constraintStart_toEndOf="@+id/lblTotal"
+        app:layout_constraintTop_toBottomOf="@+id/lblValorGorjeta" />
+
+    <TextView
+        android:id="@+id/lblValorPessoa"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="R$ 0,00"
+        android:textAlignment="textEnd"
+        app:layout_constraintStart_toEndOf="@+id/lblPessoa"
+        app:layout_constraintTop_toBottomOf="@+id/lblTotal" />
 </androidx.constraintlayout.widget.ConstraintLayout>
